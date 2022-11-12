@@ -32,7 +32,7 @@ end)
 tool.Parent = game.Players.LocalPlayer.Backpack
 end)
 
-local Shader = Tab1:NewSection("Hitbox")
+local Shader = Tab1:NewSection("Shader")
 Shader:NewButton("Shader", "ButtonInfo", function()
 -- Credits to Instance Serializer for helping me convert the Tokyowami shrine whatever thing to luau
 if not game:IsLoaded() then
@@ -332,7 +332,7 @@ for i,v in next, game:GetService('Players'):GetPlayers() do
 if v.Name ~= game:GetService('Players').LocalPlayer.Name then
 pcall(function()
 v.Character.HumanoidRootPart.Size = Vector3.new(_G.HeadSize,_G.HeadSize,_G.HeadSize)
-v.Character.HumanoidRootPart.Transparency = 0.2
+v.Character.HumanoidRootPart.Transparency = 1
 v.Character.HumanoidRootPart.BrickColor = BrickColor.new("Really red")
 v.Character.HumanoidRootPart.Material = "Neon"
 v.Character.HumanoidRootPart.CanCollide = false
