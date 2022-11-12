@@ -9,26 +9,24 @@ local Tab4 = Window:NewTab("Credits")
 
 local Hitbox = Tab1:NewSection("Hitbox")
 Hitbox:NewButton("Hitbox Expander", "ButtonInfo", function()
-	_G.HeadSize = 50
-
-	_G.Disabled = true
-
-
+_G.HeadSize = 50
+_G.Disabled = true
+ 
 game:GetService('RunService').RenderStepped:connect(function()
-		if _G.Disabled then
-			for i,v in next, game:GetService('Players'):GetPlayers() do
-				if v.Name ~= game:GetService('Players').LocalPlayer.Name then
-					pcall(function()
-						v.Character.HumanoidRootPart.Size = Vector3.new(_G.HeadSize,_G.HeadSize,_G.HeadSize)
-						v.Character.HumanoidRootPart.Transparency = 0.7
-						v.Character.HumanoidRootPart.BrickColor = BrickColor.new("Really black")
-						v.Character.HumanoidRootPart.Material = "Neon"
-						v.Character.HumanoidRootPart.CanCollide = false
-					end)
-				end
-			end
-		end
-	end)
+if _G.Disabled then
+for i,v in next, game:GetService('Players'):GetPlayers() do
+if v.Name ~= game:GetService('Players').LocalPlayer.Name then
+pcall(function()
+v.Character.HumanoidRootPart.Size = Vector3.new(_G.HeadSize,_G.HeadSize,_G.HeadSize)
+v.Character.HumanoidRootPart.Transparency = 0.7
+v.Character.HumanoidRootPart.BrickColor = BrickColor.new("Really black")
+v.Character.HumanoidRootPart.Material = "Neon"
+v.Character.HumanoidRootPart.CanCollide = false
+end)
+end
+end
+end
+end)
 end)
 
 Hitbox:NewSlider("Hitbox Size", "SliderInfo", 100, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
