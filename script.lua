@@ -21,7 +21,7 @@ game:GetService('RunService').RenderStepped:connect(function()
 					pcall(function()
 						v.Character.HumanoidRootPart.Size = Vector3.new(_G.HeadSize,_G.HeadSize,_G.HeadSize)
 						v.Character.HumanoidRootPart.Transparency = 0.7
-						v.Character.HumanoidRootPart.BrickColor = BrickColor.new("Really red")
+						v.Character.HumanoidRootPart.BrickColor = BrickColor.new("Really black")
 						v.Character.HumanoidRootPart.Material = "Neon"
 						v.Character.HumanoidRootPart.CanCollide = false
 					end)
