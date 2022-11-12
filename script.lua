@@ -30,7 +30,7 @@ end)
 end)
 
 Hitbox:NewSlider("Hitbox Size", "SliderInfo", 100, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
-G.HeadSize = s
+_G.HeadSize = s
 end)
 
 local Esp = Tab1:NewSection("ESP")
