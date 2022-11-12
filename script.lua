@@ -9,7 +9,7 @@ local Tab4 = Window:NewTab("Credits")
 
 local Hitbox = Tab1:NewSection("Hitbox")
 Hitbox:NewButton("Hitbox Expander", "ButtonInfo", function()
-G.HeadSize = 50
+	_G.HeadSize = 50
 
 	_G.Disabled = true
 
@@ -29,6 +29,7 @@ game:GetService('RunService').RenderStepped:connect(function()
 			end
 		end
 	end)
+end)
 end)
 
 Hitbox:NewSlider("Hitbox Size", "SliderInfo", 100, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
